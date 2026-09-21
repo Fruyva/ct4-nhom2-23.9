@@ -490,19 +490,32 @@ h1,h2,h3,h4,p{margin:0;}
 /* ✅ FIX NÚT ĐÓNG MODAL — CHỐNG BÓP MÉO + ÉP KÍCH THƯỚC ICON */
 .modal__close{
   position:absolute;top:16px;right:16px;z-index:3;
-  width:36px;height:36px;border-radius:var(--r-full);
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
   background:var(--brand-softer);
   color:var(--text);
   border:1px solid var(--line);
+  border-radius:var(--r-full);
   transition:background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease), border-color .25s var(--ease);
+
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
 }
 .modal__close svg{
-  width:20px !important;
-  height:20px !important;
-  flex-shrink:0;
-  stroke:currentColor;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+  stroke: currentColor !important;
+  stroke-width: 2.4 !important;
+  fill: none !important;
 }
 .modal__close:hover{background:var(--brand-soft);color:var(--brand-dark);border-color:var(--brand-light);transform:rotate(90deg);}
 
