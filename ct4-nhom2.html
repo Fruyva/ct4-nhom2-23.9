@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Sấy Mê - Đồ ăn vặt sấy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,56 +10,43 @@
 <style>
 /* =========================================================================
    ██  KHU VỰC MÀU CHỦ ĐẠO — TONE NÂU NHẠT (CARAMEL/BEIGE)  ██
-   -------------------------------------------------------------------------
-   Dải màu đã chuyển hoàn toàn sang nâu nhạt — không còn xanh lá.
-   Nền tổng thể giữ trắng sáng (#fbfefc).
    ========================================================================= */
 :root{
-  /* ----- 1. MÀU CHÍNH (Nâu Nhạt / Caramel) ----- */
-  --brand:        #B8860B;   /* Nâu caramel chủ đạo */
-  --brand-dark:   #8B5A2B;   /* Nâu đậm cho hover / chữ nhấn */
-  --brand-light:  #DEB887;   /* Be tan sáng */
-  --brand-soft:   #F5F5DC;   /* Nền kem nhạt (chip, khối nhấn) */
-  --brand-softer: #FAFAD2;   /* Nền kem rất nhạt (nền phụ) */
+  --brand:        #B8860B;
+  --brand-dark:   #8B5A2B;
+  --brand-light:  #DEB887;
+  --brand-soft:   #F5F5DC;
+  --brand-softer: #FAFAD2;
 
-  /* ----- 2. MÀU NHẤN (Vàng mật ong) ----- */
   --accent:       #ffc857;
   --accent-dark:  #f5b73d;
   --accent-soft:  #fff4d9;
 
-  /* ----- 3. MÀU NỀN & CHỮ ----- */
   --white:  #ffffff;
-  --bg:     #fbfefc;         /* Nền tổng thể — trắng sáng */
-  --text:   #2B1F14;         /* Nâu đậm gần như đen */
+  --bg:     #fbfefc;
+  --text:   #2B1F14;
   --text-2: #57432F;
   --muted:  #8C7A66;
 
-  /* ----- 4. ĐƯỜNG VIỀN ----- */
   --line:      #EBE0D2;
   --line-soft: #F5EDE2;
 
-  /* ----- 5. MÀU CẢNH BÁO ----- */
   --danger:      #ff5c5c;
   --danger-soft: #fff0f0;
 
-  /* ----- 6. BO GÓC ----- */
   --r-sm:   10px;
   --r-md:   16px;
   --r-lg:   24px;
   --r-full: 999px;
 
-  /* ----- 7. BÓNG ĐỔ ----- */
   --sh-sm: 0 4px 14px rgba(43,31,20,.05);
   --sh-md: 0 10px 30px rgba(43,31,20,.08);
   --sh-lg: 0 24px 60px rgba(43,31,20,.14);
 
-  /* ----- 8. KÍCH THƯỚC HEADER ----- */
   --header-h: 72px;
 
-  /* ----- 9. HIỆU ỨNG CHUYỂN ĐỘNG ----- */
   --ease: cubic-bezier(.22,.8,.32,1);
 }
-/* ============================ HẾT KHU VỰC MÀU ============================ */
 
 *,*::before,*::after{box-sizing:border-box;}
 html{-webkit-text-size-adjust:100%;}
@@ -118,7 +105,7 @@ h1,h2,h3,h4,p{margin:0;}
 .btn--block{width:100%;}
 .btn--sm{padding:9px 18px;font-size:13.5px;}
 
-/* ---------- PLACEHOLDER (dùng cho avatar dự phòng nếu cần) ---------- */
+/* ---------- PLACEHOLDER ---------- */
 .ph{
   position:relative;overflow:hidden;
   background:
@@ -157,7 +144,6 @@ h1,h2,h3,h4,p{margin:0;}
 .header.is-stuck{box-shadow:0 6px 22px rgba(43,31,20,.06);}
 .header__inner{display:flex;align-items:center;gap:20px;min-height:var(--header-h);}
 
-/* Logo: icon (Logo.jpg) + tên thương hiệu (tenthuonghieu.png) */
 .logo{
   display:flex;
   align-items:center;
@@ -189,21 +175,12 @@ h1,h2,h3,h4,p{margin:0;}
   height: 44px;
   max-width: 220px;
 }
-@media(max-width:400px){
-  .logo{gap:8px;}
-  .logo__mark-img{width:36px;height:36px;border-radius:10px;}
-  .logo__name-img{height:30px;max-width:150px;}
-  .footer .logo__mark-img{width:44px;height:44px;}
-  .footer .logo__name-img{height:36px;max-width:180px;}
-}
 
-/* Nav */
 .nav{display:flex;align-items:center;gap:3px;margin-left:8px;}
 .nav a{padding:9px 14px;border-radius:var(--r-full);font-size:14px;font-weight:600;color:var(--text-2);transition:color .22s var(--ease), background .22s var(--ease);}
 .nav a:hover{color:var(--brand-dark);background:var(--brand-softer);}
 .nav a.is-active{color:var(--brand-dark);background:var(--brand-soft);}
 
-/* Search */
 .search{position:relative;flex:1 1 220px;max-width:320px;margin-left:auto;}
 .search__icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--muted);pointer-events:none;}
 .search input{
@@ -262,7 +239,6 @@ h1,h2,h3,h4,p{margin:0;}
 .hero__media{position:relative;}
 .hero__video-card{background:#fff;border-radius:var(--r-lg);padding:12px;box-shadow:var(--sh-lg);border:1px solid var(--line);}
 
-/* Video Hero */
 .hero__video{
   display:block;width:100%;
   aspect-ratio:16/9;
@@ -303,22 +279,9 @@ h1,h2,h3,h4,p{margin:0;}
 .trust__ico svg{width:22px;height:22px;}
 .trust__item strong{display:block;font-size:13.5px;font-weight:700;}
 .trust__item span{font-size:12.5px;color:var(--muted);font-weight:500;line-height:1.5;}
-@media(max-width:960px){
-  .trust__grid{grid-template-columns:repeat(2,1fr);}
-  .trust__item:nth-child(2){border-right:0;}
-  .trust__item:nth-child(1),.trust__item:nth-child(2){border-bottom:1px solid var(--line-soft);}
-}
-@media(max-width:560px){
-  .trust__grid{grid-template-columns:1fr;}
-  .trust__item{border-right:0;border-bottom:1px solid var(--line-soft);}
-  .trust__item:last-child{border-bottom:0;}
-}
 
 /* ---------- CATEGORIES ---------- */
 .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-@media(max-width:1100px){.cat-grid{grid-template-columns:repeat(3,1fr);}}
-@media(max-width:820px){.cat-grid{grid-template-columns:repeat(2,1fr);gap:16px;}}
-@media(max-width:460px){.cat-grid{grid-template-columns:1fr;}}
 
 .cat-card{
   background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
@@ -353,9 +316,6 @@ h1,h2,h3,h4,p{margin:0;}
 .chip.is-active{background:var(--brand);border-color:var(--brand);color:#fff;box-shadow:0 6px 16px -6px rgba(139,90,43,.55);}
 
 .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-@media(max-width:1100px){.product-grid{grid-template-columns:repeat(3,1fr);}}
-@media(max-width:820px){.product-grid{grid-template-columns:repeat(2,1fr);gap:16px;}}
-@media(max-width:460px){.product-grid{grid-template-columns:1fr;}}
 
 .card{
   background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
@@ -366,7 +326,6 @@ h1,h2,h3,h4,p{margin:0;}
 .card:hover{transform:translateY(-6px);box-shadow:var(--sh-md);border-color:var(--brand-light);}
 .card__media{position:relative;padding:12px 12px 0;}
 
-/* ✅ ẢNH SẢN PHẨM THẺ NGOÀI — TỶ LỆ 3:4 */
 .card__img{
   display:block;
   width:100%;
@@ -444,11 +403,9 @@ h1,h2,h3,h4,p{margin:0;}
   border-radius:var(--r-md);
   border:1.5px solid rgba(255,255,255,.28);
 }
-@media(max-width:900px){.promo{grid-template-columns:1fr;padding:38px 28px;}}
 
 /* ---------- REVIEWS ---------- */
 .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-@media(max-width:900px){.review-grid{grid-template-columns:1fr;}}
 .review{
   background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
   padding:26px;display:flex;flex-direction:column;gap:14px;
@@ -480,7 +437,6 @@ h1,h2,h3,h4,p{margin:0;}
 .news-form{display:flex;gap:10px;max-width:460px;margin:0 auto;}
 .news-form input{flex:1;padding:13px 20px;border-radius:var(--r-full);border:1.5px solid var(--line);background:#fff;font-size:14.5px;outline:none;transition:border-color .25s var(--ease), box-shadow .25s var(--ease);}
 .news-form input:focus{border-color:var(--brand-light);box-shadow:0 0 0 4px rgba(139,90,43,.15);}
-@media(max-width:520px){.news-form{flex-direction:column;}}
 
 /* ---------- FOOTER ---------- */
 .footer{background:#fff;border-top:1px solid var(--line);padding:60px 0 0;margin-top:80px;}
@@ -502,8 +458,6 @@ h1,h2,h3,h4,p{margin:0;}
 .footer__bottom{border-top:1px solid var(--line-soft);padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);}
 .footer__bottom nav{display:flex;gap:20px;flex-wrap:wrap;}
 .footer__bottom a:hover{color:var(--brand-dark);}
-@media(max-width:900px){.footer__grid{grid-template-columns:1fr 1fr;gap:32px;}}
-@media(max-width:560px){.footer__grid{grid-template-columns:1fr;}}
 
 /* ---------- MODAL SYSTEM ---------- */
 .modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px;}
@@ -531,10 +485,6 @@ h1,h2,h3,h4,p{margin:0;}
 
 .modal__title{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px;padding-right:36px;}
 .modal__subtitle{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:22px;}
-@media(max-width:560px){
-  .modal{padding:12px;}
-  .modal__dialog{padding:24px 20px;}
-}
 
 .news-empty{text-align:center;padding:16px 0 8px;}
 .news-empty__ico{width:80px;height:80px;border-radius:50%;margin:0 auto 20px;background:var(--brand-soft);color:var(--brand-dark);display:grid;place-items:center;}
@@ -554,7 +504,6 @@ h1,h2,h3,h4,p{margin:0;}
 .var-product{display:flex;gap:16px;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--line);}
 .var-product__media{width:96px;flex:none;}
 
-/* ✅ ẢNH NHỎ TRONG VARIANT — TỶ LỆ 3:4 */
 .var-product__img{
   display:block;
   width:100%;
@@ -598,7 +547,6 @@ h1,h2,h3,h4,p{margin:0;}
   min-width:100%;
 }
 
-/* ✅ ẢNH SLIDER — TỶ LỆ 3:4 */
 .slider-img{
   display:block;
   width:100%;
@@ -752,7 +700,6 @@ h1,h2,h3,h4,p{margin:0;}
 .game-rules h4{font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-dark);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
 .game-rules h4 svg{width:15px;height:15px;}
 .game-rules ul{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 18px;}
-@media(max-width:620px){.game-rules ul{grid-template-columns:1fr;}}
 .game-rules li{font-size:13px;color:var(--text-2);line-height:1.5;display:flex;gap:8px;align-items:flex-start;}
 .game-rules li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brand);flex:none;margin-top:7px;}
 
@@ -837,7 +784,6 @@ h1,h2,h3,h4,p{margin:0;}
 .citem:last-child{border-bottom:0;}
 .citem__media{width:72px;flex:none;}
 
-/* ✅ ẢNH TRONG GIỎ HÀNG — TỶ LỆ 3:4 */
 .citem__img{
   display:block;
   width:100%;
@@ -895,7 +841,463 @@ h1,h2,h3,h4,p{margin:0;}
 .mobile-menu.is-open{transform:translateY(0);}
 .mobile-menu a{display:block;padding:13px 14px;border-radius:var(--r-md);font-size:15px;font-weight:600;color:var(--text-2);}
 .mobile-menu a:hover{background:var(--brand-softer);color:var(--brand-dark);}
-@media(max-width:980px){.mobile-menu{display:block;}}
+
+/* =========================================================================
+   ██  RESPONSIVE — ĐẠI TU MOBILE (TABLET + PHONE)  ██
+   ========================================================================= */
+
+/* ==================== TABLET — max-width: 1100px ==================== */
+@media (max-width: 1100px){
+  .product-grid{grid-template-columns:repeat(3,1fr);}
+  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .hero__grid{gap:40px;}
+}
+
+/* ==================== TABLET — max-width: 980px ==================== */
+@media (max-width: 980px){
+  :root{--header-h:64px;}
+
+  .nav{display:none;}
+  .burger{display:grid;}
+  .mobile-menu{display:block;}
+
+  .section{padding:56px 0;}
+  .section--tight{padding:40px 0;}
+
+  .hero{padding:44px 0 52px;}
+  .hero__grid{grid-template-columns:1fr;gap:36px;}
+  .hero__media{order:-1;}
+  .hero__title{font-size:clamp(26px,5vw,36px);}
+  .hero__desc{font-size:15px;margin-bottom:22px;}
+  .hero__cta{margin-bottom:26px;}
+  .hero__stats{gap:26px;padding-top:20px;}
+
+  .trust__grid{grid-template-columns:repeat(2,1fr);}
+  .trust__item:nth-child(2){border-right:0;}
+  .trust__item:nth-child(1),.trust__item:nth-child(2){border-bottom:1px solid var(--line-soft);}
+
+  .promo{grid-template-columns:1fr;padding:36px 26px;gap:26px;}
+  .promo__media{order:-1;max-width:340px;margin:0 auto;}
+  .promo h2{font-size:clamp(20px,3.6vw,26px);}
+  .promo p{font-size:14px;}
+
+  .review-grid{grid-template-columns:1fr;gap:16px;}
+
+  .footer{margin-top:56px;padding:44px 0 0;}
+  .footer__grid{grid-template-columns:1fr 1fr;gap:30px;padding-bottom:32px;}
+
+  .float-card{padding:10px 13px;}
+  .float-card--a{top:-12px;left:-10px;}
+  .float-card--b{bottom:-14px;right:-8px;}
+  .float-card strong{font-size:12px;}
+  .float-card span{font-size:10.5px;}
+  .float-card__ico{width:30px;height:30px;}
+  .float-card__ico svg{width:15px;height:15px;}
+}
+
+/* ==================== MOBILE — max-width: 768px ==================== */
+@media (max-width: 768px){
+  .container{width:min(1200px, 100% - 32px);}
+  .section{padding:40px 0;}
+  .section--tight{padding:32px 0;}
+
+  .section-head{margin-bottom:26px;}
+  .section-title{font-size:clamp(20px,5.2vw,24px);}
+  .section-sub{font-size:13.5px;line-height:1.6;}
+  .eyebrow{font-size:11px;padding:5px 12px;margin-bottom:12px;}
+
+  /* Topbar gọn */
+  .topbar__inner{min-height:34px;font-size:11.5px;justify-content:center;}
+  .topbar__list{gap:0;justify-content:center;width:100%;}
+  .topbar__list li:not(:first-child){display:none;}
+  .topbar__list li:first-child{
+    display:inline-flex;gap:6px;
+  }
+  .topbar__inner .topbar__item:last-child{display:none;}
+
+  /* Header gọn */
+  .header__inner{gap:10px;min-height:64px;}
+  .logo{gap:9px;}
+  .logo__mark-img{width:38px;height:38px;border-radius:10px;}
+  .logo__name-img{height:30px;max-width:150px;}
+
+  .search{flex:1 1 100px;max-width:none;order:3;margin-left:0;}
+  .search input{padding:9px 14px 9px 38px;font-size:13.5px;}
+  .search__icon{left:12px;width:16px;height:16px;}
+
+  .head-actions{gap:6px;}
+  .icon-btn{width:38px;height:38px;}
+  .icon-btn svg{width:17px;height:17px;}
+  .cart-badge{min-width:18px;height:18px;font-size:10px;}
+
+  /* Hero */
+  .hero{padding:28px 0 40px;}
+  .hero__grid{gap:30px;}
+  .hero__title{font-size:clamp(24px,6.4vw,30px);line-height:1.18;margin-bottom:14px;}
+  .hero__desc{font-size:14px;line-height:1.65;margin-bottom:20px;}
+  .hero__cta{gap:9px;margin-bottom:22px;}
+  .hero__cta .btn{padding:11px 20px;font-size:13.5px;flex:1 1 auto;min-width:140px;}
+  .hero__stats{gap:18px;padding-top:18px;}
+  .stat__num{font-size:20px;}
+  .stat__num small{font-size:13px;}
+  .stat__label{font-size:11px;}
+
+  .hero__video-card{padding:8px;border-radius:18px;}
+  .hero__video{border-radius:12px;}
+  .hero__video-meta{padding:12px 6px 4px;}
+  .hero__video-meta strong{font-size:13px;}
+  .hero__video-meta span{font-size:11px;}
+
+  .float-card{padding:8px 11px;gap:8px;border-radius:12px;}
+  .float-card--a{top:-10px;left:-6px;}
+  .float-card--b{bottom:-12px;right:-4px;}
+  .float-card strong{font-size:11px;}
+  .float-card span{font-size:10px;}
+  .float-card__ico{width:26px;height:26px;border-radius:8px;}
+  .float-card__ico svg{width:13px;height:13px;}
+
+  /* Trust bar */
+  .trust__grid{grid-template-columns:1fr;}
+  .trust__item{border-right:0;border-bottom:1px solid var(--line-soft);padding:16px 4px;gap:12px;}
+  .trust__item:last-child{border-bottom:0;}
+  .trust__ico{width:40px;height:40px;border-radius:12px;}
+  .trust__ico svg{width:19px;height:19px;}
+  .trust__item strong{font-size:13px;}
+  .trust__item span{font-size:11.5px;}
+
+  /* Categories — 1 cột tràn viền gọn gàng */
+  .cat-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+  .cat-card{padding:8px 8px 14px;border-radius:18px;}
+  .cat-card .ph{margin-bottom:0;}
+  .cat-card__img{margin-bottom:12px;border-radius:14px;}
+  .cat-card h3{font-size:14px;padding:0 4px;}
+  .cat-card p{font-size:11.5px;padding:0 4px;}
+
+  /* Shop */
+  .shop-head{margin-bottom:20px;gap:14px;align-items:stretch;}
+  .shop-head > div:first-child{width:100%;}
+  .filters{
+    width:100%;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:4px;
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+    gap:7px;
+  }
+  .filters::-webkit-scrollbar{display:none;}
+  .chip{flex:none;padding:8px 15px;font-size:13px;}
+
+  /* Product grid — 2 cột */
+  .product-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+
+  .card{border-radius:18px;}
+  .card__media{padding:8px 8px 0;}
+  .card__img{border-radius:14px;}
+  .badge{top:14px;left:14px;font-size:9.5px;padding:4px 9px;}
+
+  .card__body{padding:12px 14px 14px;}
+  .card__cat{font-size:10px;margin-bottom:4px;}
+  .card__name{font-size:14px;line-height:1.35;margin-bottom:4px;}
+  .card__unit{font-size:11px;margin-bottom:8px;}
+  .card__rating{font-size:11px;gap:5px;margin-bottom:10px;flex-wrap:wrap;}
+  .stars{font-size:11.5px;}
+
+  .card__foot{padding-top:10px;flex-direction:column;align-items:stretch;gap:9px;}
+  .price{flex-direction:row;align-items:baseline;gap:6px;justify-content:flex-start;}
+  .price__now{font-size:15.5px;}
+  .price__old{font-size:11px;}
+
+  .card__actions{width:100%;gap:6px;}
+  .card__actions .btn{flex:1;padding:9px 12px;font-size:12.5px;}
+  .btn-plus{width:38px;height:38px;border-radius:11px;flex:none;}
+  .btn-plus svg{width:17px;height:17px;}
+
+  /* Promo — ảnh xuống dưới */
+  .promo{padding:28px 20px;border-radius:20px;gap:22px;}
+  .promo__content{order:1;}
+  .promo__media{order:2;max-width:100%;}
+  .promo__tag{font-size:10.5px;padding:5px 12px;margin-bottom:12px;}
+  .promo h2{font-size:20px;line-height:1.25;margin-bottom:10px;}
+  .promo p{font-size:13.5px;margin-bottom:18px;}
+  .promo__code{padding:9px 16px;font-size:13.5px;margin-bottom:18px;}
+  .promo__code small{font-size:9.5px;}
+  .promo .btn{width:100%;padding:11px 20px;font-size:13.5px;}
+
+  /* Reviews */
+  .review{padding:20px;border-radius:18px;gap:12px;}
+  .review__quote{font-size:13.5px;line-height:1.7;}
+  .review__user strong{font-size:13px;}
+  .review__user span{font-size:11.5px;}
+  .review-avatar{width:42px;height:42px;font-size:13px;}
+
+  /* Newsletter */
+  .newsletter{padding:32px 20px;border-radius:20px;}
+  .newsletter h2{font-size:18px;line-height:1.3;}
+  .newsletter p{font-size:13.5px;margin-bottom:20px;}
+  .news-form{flex-direction:column;gap:9px;}
+  .news-form input{padding:12px 16px;font-size:14px;}
+
+  /* Footer */
+  .footer{margin-top:44px;padding:36px 0 0;}
+  .footer__grid{grid-template-columns:1fr;gap:26px;padding-bottom:26px;}
+  .footer__brand p{font-size:13px;margin:14px 0 16px;}
+  .footer h4{font-size:12px;margin-bottom:14px;}
+  .footer__links a{font-size:13px;}
+  .footer__contact li{font-size:13px;}
+  .footer__bottom{padding:16px 0;font-size:11.5px;flex-direction:column;align-items:flex-start;gap:12px;}
+  .footer__bottom nav{gap:14px;flex-wrap:wrap;}
+  .footer .logo__mark-img{width:44px;height:44px;border-radius:12px;}
+  .footer .logo__name-img{height:34px;max-width:170px;}
+
+  /* Modal */
+  .modal{padding:12px;}
+  .modal__dialog{padding:22px 18px;border-radius:20px;max-height:calc(100vh - 24px);}
+  .modal__dialog--full{padding:0;border-radius:18px;}
+  .modal__title{font-size:18px;}
+  .modal__subtitle{font-size:13px;margin-bottom:16px;}
+  .modal__close{width:34px;height:34px;top:12px;right:12px;}
+  .modal__close svg{width:16px;height:16px;}
+
+  /* Variant modal */
+  .var-product{gap:12px;margin-bottom:16px;padding-bottom:14px;}
+  .var-product__media{width:80px;}
+  .var-product__info h4{font-size:14px;}
+  .var-product__price{font-size:17px;}
+  .var-product__old{font-size:11.5px;}
+
+  .variant-slider{max-width:100%;margin-bottom:12px;border-radius:14px;}
+  .slider-viewport{border-radius:14px;}
+  .slider-arrow{width:32px;height:32px;}
+  .slider-arrow--prev{left:8px;}
+  .slider-arrow--next{right:8px;}
+  .slider-arrow svg{width:15px;height:15px;}
+  .slider-counter{font-size:10.5px;padding:3px 9px;top:10px;right:10px;}
+  .slider-dots{bottom:8px;padding:4px 8px;gap:4px;}
+  .slider-dot{width:5px;height:5px;}
+  .slider-dot.is-active{width:15px;}
+
+  .variant-detail-wrap{margin-bottom:16px;}
+  .variant-detail-btn{padding:10px 16px;font-size:13px;}
+
+  .var-group{margin-bottom:16px;}
+  .var-group__label{font-size:11.5px;margin-bottom:8px;}
+  .var-options{gap:6px;}
+  .var-opt{padding:9px 8px;font-size:12.5px;border-radius:12px;}
+  .var-opt small{font-size:10px;}
+
+  .qty-picker button{width:38px;height:38px;font-size:16px;}
+  .qty-picker__val{min-width:48px;height:38px;font-size:14px;}
+
+  .var-summary{padding:11px 14px;margin-bottom:16px;border-radius:12px;}
+  .var-summary__label{font-size:12.5px;}
+  .var-summary__value{font-size:17px;}
+
+  /* Auth modal */
+  .auth-head{margin-bottom:20px;}
+  .auth-head__ico{width:52px;height:52px;border-radius:15px;margin-bottom:12px;}
+  .auth-head__ico svg{width:24px;height:24px;}
+  .auth-head h3{font-size:19px;}
+  .auth-head p{font-size:13px;}
+  .auth-form .field{margin-bottom:12px;}
+  .field__label{font-size:11.5px;}
+  .field input{padding:11px 14px 11px 38px;font-size:14px;}
+  .field__wrap svg{left:12px;width:15px;height:15px;}
+  .auth-switch{font-size:13px;margin:14px 0 16px;}
+  .social-login{gap:8px;}
+  .social-btn{padding:10px 12px;font-size:12.5px;gap:7px;}
+  .social-btn svg{width:16px;height:16px;}
+  .auth-note{font-size:11px;}
+
+  /* Game modal */
+  .game-modal__head{padding:18px 20px 14px;}
+  .game-modal__head h3{font-size:18px;gap:8px;}
+  .game-modal__head h3 svg{width:20px;height:20px;}
+  .game-modal__head p{font-size:12.5px;}
+  .game-modal__head .modal__close{top:14px;right:14px;}
+  .game-modal__body{padding:16px 18px 22px;}
+
+  .game-rules{padding:12px 14px;margin-bottom:14px;border-radius:12px;}
+  .game-rules h4{font-size:11.5px;margin-bottom:8px;}
+  .game-rules ul{grid-template-columns:1fr;gap:6px;}
+  .game-rules li{font-size:12.5px;}
+
+  .game-stage{margin-bottom:14px;border-radius:12px;}
+  .game-canvas-wrap{padding:8px;}
+
+  .hud-pill{padding:6px 12px;font-size:12px;gap:5px;}
+  .hud-pill svg{width:12px;height:12px;}
+
+  .game-state{padding:14px;}
+  .game-state__card{padding:24px 20px;border-radius:18px;}
+  .game-state__ico{width:54px;height:54px;border-radius:16px;margin-bottom:12px;}
+  .game-state__ico svg{width:26px;height:26px;}
+  .game-state__card h4{font-size:17px;}
+  .game-state__card p{font-size:12.5px;margin-bottom:16px;}
+  .game-state__score{font-size:28px;margin-bottom:12px;}
+  .game-state__score small{font-size:12px;}
+
+  .reward-box{padding:14px 16px;border-radius:12px;}
+  .reward-box__tag{font-size:9.5px;padding:3px 9px;margin-bottom:8px;}
+  .reward-box h5{font-size:15px;}
+  .reward-box p{font-size:11.5px;margin-bottom:9px;}
+  .reward-box__code{padding:9px 12px;font-size:13px;letter-spacing:.08em;}
+  .reward-box__code button{font-size:10px;padding:4px 8px;}
+
+  .leaderboard{border-radius:12px;}
+  .leaderboard__head{padding:12px 16px;}
+  .leaderboard__head h4{font-size:13px;}
+  .leaderboard__head h4 svg{width:15px;height:15px;}
+  .leaderboard__head span{font-size:11px;}
+  .leaderboard__list li{padding:10px 16px;gap:10px;}
+  .lb-rank{width:26px;height:26px;font-size:12px;border-radius:8px;}
+  .lb-name{font-size:13px;}
+  .lb-score{font-size:12.5px;padding:4px 10px;min-width:56px;}
+
+  /* Cart drawer */
+  .drawer{width:100%;}
+  .drawer__head{padding:16px 18px;}
+  .drawer__head h3{font-size:15px;}
+  .drawer__body{padding:12px 18px;}
+  .citem{padding:12px 0;gap:12px;}
+  .citem__media{width:64px;}
+  .citem__name{font-size:13px;}
+  .citem__price{font-size:13.5px;}
+  .drawer__foot{padding:14px 18px 18px;}
+  .sum-row{font-size:13px;}
+  .sum-row--total{font-size:14.5px;}
+  .sum-row--total span:last-child{font-size:17px;}
+
+  /* Toast */
+  .toast-wrap{bottom:18px;padding:0 12px;}
+  .toast{padding:10px 15px 10px 12px;font-size:12.5px;gap:9px;}
+  .toast__ico{width:26px;height:26px;}
+  .toast__ico svg{width:14px;height:14px;}
+}
+
+/* ==================== SMALL PHONE — max-width: 560px ==================== */
+@media (max-width: 560px){
+  .container{width:min(1200px, 100% - 24px);}
+  .section{padding:32px 0;}
+  .section--tight{padding:26px 0;}
+
+  .section-title{font-size:21px;}
+  .section-sub{font-size:13px;}
+
+  /* Header cực gọn */
+  .header__inner{gap:8px;}
+  .logo__mark-img{width:34px;height:34px;border-radius:9px;}
+  .logo__name-img{height:26px;max-width:130px;}
+  .search input{padding:8px 12px 8px 34px;font-size:13px;}
+  .search__icon{left:10px;width:15px;height:15px;}
+  .icon-btn{width:36px;height:36px;}
+  .icon-btn svg{width:16px;height:16px;}
+
+  /* Hero */
+  .hero{padding:22px 0 32px;}
+  .hero__title{font-size:22px;line-height:1.22;}
+  .hero__desc{font-size:13.5px;}
+  .hero__cta{flex-direction:column;gap:8px;margin-bottom:18px;}
+  .hero__cta .btn{width:100%;padding:11px 18px;font-size:13px;}
+  .hero__stats{gap:14px;justify-content:space-between;}
+  .stat{flex:1 1 calc(33% - 10px);min-width:0;}
+  .stat__num{font-size:18px;}
+  .stat__num small{font-size:12px;}
+  .stat__label{font-size:10.5px;}
+
+  .float-card{padding:7px 10px;gap:7px;border-radius:10px;}
+  .float-card__ico{width:24px;height:24px;border-radius:7px;}
+  .float-card__ico svg{width:12px;height:12px;}
+  .float-card strong{font-size:10.5px;}
+  .float-card span{display:none;}
+
+  /* Categories — 1 cột */
+  .cat-grid{grid-template-columns:1fr;gap:12px;}
+
+  /* Product grid — 2 cột vẫn ổn */
+  .product-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .card{border-radius:16px;}
+  .card__body{padding:10px 12px 12px;}
+  .card__name{font-size:13px;}
+  .price__now{font-size:14.5px;}
+  .card__actions .btn{padding:8px 10px;font-size:12px;}
+  .btn-plus{width:34px;height:34px;border-radius:10px;}
+  .btn-plus svg{width:15px;height:15px;}
+
+  /* Promo */
+  .promo{padding:22px 16px;border-radius:16px;gap:16px;}
+  .promo h2{font-size:18px;}
+  .promo p{font-size:13px;}
+
+  /* Reviews */
+  .review{padding:16px;border-radius:16px;}
+
+  /* Newsletter */
+  .newsletter{padding:26px 16px;border-radius:16px;}
+  .newsletter h2{font-size:16.5px;}
+
+  /* Footer */
+  .footer{margin-top:36px;padding:30px 0 0;}
+  .footer__grid{gap:22px;}
+
+  /* Modal */
+  .modal{padding:8px;}
+  .modal__dialog{padding:18px 14px;border-radius:16px;max-height:calc(100vh - 16px);}
+  .modal__dialog--full{padding:0;border-radius:14px;}
+
+  /* ✅ GAME MODAL — MỞ RỘNG TỐI ĐA CHO CANVAS */
+  .game-modal__dialog{padding:0 !important;}
+  .game-modal__body{padding:14px 14px 20px;}
+
+  .game-modal__head{padding:16px 16px 12px;}
+  .game-modal__head h3{font-size:16px;}
+  .game-modal__head p{font-size:12px;line-height:1.5;}
+  .game-modal__head .modal__close{width:30px;height:30px;top:10px;right:10px;}
+
+  .game-rules{padding:10px 12px;margin-bottom:12px;}
+  .game-rules h4{font-size:11px;}
+  .game-rules ul{gap:5px;}
+  .game-rules li{font-size:12px;line-height:1.45;}
+
+  .game-stage{margin-bottom:12px;}
+  .game-canvas-wrap{padding:6px;}
+
+  .game-state{padding:10px;}
+  .game-state__card{padding:20px 16px;border-radius:16px;}
+
+  /* Variant slider */
+  .variant-slider{max-width:100%;}
+  .var-product__media{width:70px;}
+  .var-product__info h4{font-size:13px;}
+  .var-product__price{font-size:16px;}
+
+  .var-opt{padding:8px 6px;font-size:12px;}
+  .var-opt small{font-size:9.5px;}
+
+  /* Auth */
+  .social-login{flex-direction:column;}
+  .social-btn{width:100%;}
+
+  /* Toast */
+  .toast{font-size:12px;padding:9px 13px 9px 10px;}
+}
+
+/* ==================== EXTRA SMALL — max-width: 400px ==================== */
+@media (max-width: 400px){
+  .container{width:min(1200px, 100% - 20px);}
+
+  .logo__mark-img{width:32px;height:32px;border-radius:8px;}
+  .logo__name-img{height:24px;max-width:120px;}
+
+  .hero__title{font-size:20px;}
+  .product-grid{gap:8px;}
+  .card__name{font-size:12.5px;}
+
+  .section-title{font-size:19px;}
+
+  .var-options{grid-template-columns:1fr 1fr 1fr;gap:5px;}
+  .var-opt{padding:7px 4px;font-size:11.5px;}
+}
 </style>
 </head>
 <body>
@@ -906,7 +1308,7 @@ h1,h2,h3,h4,p{margin:0;}
     <ul class="topbar__list">
       <li class="topbar__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        Freeship toàn quốc cho đơn từ 300.000đ
+        Freeship đơn từ 300.000đ
       </li>
       <li class="topbar__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1426,9 +1828,6 @@ h1,h2,h3,h4,p{margin:0;}
       </div>
     </div>
 
-    <!-- ============================================================
-         SLIDER 9 ẢNH SẢN PHẨM (TỶ LỆ 3:4)
-         ============================================================ -->
     <div class="variant-slider">
       <div class="slider-viewport" id="sliderViewport">
         <div class="slider-track" id="sliderTrack">
@@ -1473,9 +1872,6 @@ h1,h2,h3,h4,p{margin:0;}
       <div class="slider-dots" id="sliderDots"></div>
     </div>
 
-    <!-- ============================================================
-         NÚT XEM CHI TIẾT SẢN PHẨM
-         ============================================================ -->
     <div class="variant-detail-wrap">
       <!-- CHÈN LINK TRANG CHI TIẾT SẢN PHẨM VÀO ĐÂY -->
       <a href="javascript:void(0)" class="btn btn--ghost variant-detail-btn" id="viewDetailBtn">
@@ -2452,8 +2848,10 @@ function initCanvas(){
   game.ctx = game.canvas.getContext('2d');
 }
 
+/* ✅ FIX LỖI EMOJI TÀNG HÌNH TRÊN MOBILE */
 function drawEmoji(ctx, char, x, y, size){
-  ctx.font = `${size}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji","EmojiOne Color",sans-serif`;
+  ctx.font = `${size}px "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif`;
+  ctx.fillStyle = '#000000';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText(char, x, y);
