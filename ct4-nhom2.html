@@ -553,7 +553,7 @@ h1,h2,h3,h4,p{margin:0;}
 .var-product__price{font-size:19px;font-weight:800;color:var(--brand-dark);letter-spacing:-.02em;}
 .var-product__old{font-size:12.5px;color:var(--muted);text-decoration:line-through;font-weight:500;margin-left:6px;}
 
-/* ---------- SLIDER 9 ẢNH ---------- */
+/* ---------- SLIDER ẢNH ---------- */
 .variant-slider{
   position:relative;
   margin-bottom:14px;
@@ -1597,7 +1597,7 @@ h1,h2,h3,h4,p{margin:0;}
 
       <div class="filters" id="filters">
         <button class="chip is-active" data-filter="all">Tất cả</button>
-        <button class="chip" data-filter="say-kho">Đồ sấy khô</button>
+        <button class="chip" data-filter="say-kho">Trái cây sấy</button>
       </div>
     </div>
 
@@ -1755,9 +1755,9 @@ h1,h2,h3,h4,p{margin:0;}
         <h4>Sản phẩm</h4>
         <ul class="footer__links">
           <li><a href="#san-pham" class="js-scroll">Trái cây sấy</a></li>
-          <li><a href="#san-pham" class="js-scroll">Đồ sấy khô</a></li>
-          <li><a href="#san-pham" class="js-scroll">Combo tiết kiệm</a></li>
-          <li><a href="#san-pham" class="js-scroll">Sản phẩm mới</a></li>
+          <li><a href="#san-pham" class="js-scroll">Mít sấy</a></li>
+          <li><a href="#san-pham" class="js-scroll">Xoài sấy</a></li>
+          <li><a href="#san-pham" class="js-scroll">Tắc sấy</a></li>
         </ul>
       </div>
 
@@ -1878,52 +1878,24 @@ h1,h2,h3,h4,p{margin:0;}
     </button>
 
     <h3 class="modal__title" id="variantTitle">Tuỳ chọn sản phẩm</h3>
-    <p class="modal__subtitle">Chọn loại trái cây, khối lượng và số lượng bạn muốn.</p>
+    <p class="modal__subtitle">Chọn khối lượng và số lượng bạn muốn.</p>
 
     <div class="var-product">
       <div class="var-product__media">
-        <img src="ct4-nhom2-image/mitsay.png" alt="Đồ ăn vặt trái cây sấy khô" class="var-product__img" />
+        <img src="ct4-nhom2-image/mitsay.png" alt="Sản phẩm" class="var-product__img" id="varProductImg" />
       </div>
       <div class="var-product__info">
-        <h4>Đồ ăn vặt trái cây sấy khô</h4>
+        <h4 id="varProductName">Mít sấy</h4>
         <div>
-          <span class="var-product__price" id="varPrice">120.000đ</span>
-          <span class="var-product__old" id="varOld">150.000đ</span>
+          <span class="var-product__price" id="varPrice">57.143đ</span>
+          <span class="var-product__old" id="varOld">69.000đ</span>
         </div>
       </div>
     </div>
 
     <div class="variant-slider">
       <div class="slider-viewport" id="sliderViewport">
-        <div class="slider-track" id="sliderTrack">
-          <div class="slider-slide">
-            <img src="ct4-nhom2-image/mitsay.png" alt="Ảnh sản phẩm 1" class="slider-img" draggable="false" />
-          </div>
-          <div class="slider-slide">
-            <img src="ct4-nhom2-image/xoaisay.png" alt="Ảnh sản phẩm 2" class="slider-img" draggable="false" />
-          </div>
-          <div class="slider-slide">
-            <img src="ct4-nhom2-image/tacsay.png" alt="Ảnh sản phẩm 3" class="slider-img" draggable="false" />
-          </div>
-          <div class="slider-slide">
-            <img src="ct4-nhom2-image/mitsay2.png" alt="Ảnh sản phẩm 4" class="slider-img" draggable="false" />
-          </div>
-          <div class="slider-slide">
-            <img src="ct4-nhom2-image/xoaisay2.png" alt="Ảnh sản phẩm 5" class="slider-img" draggable="false" />
-          </div>
-          <div class="slider-slide">
-            <img src="ct4-nhom2-image/tacsay2.png" alt="Ảnh sản phẩm 6" class="slider-img" draggable="false" />
-          </div>
-          <div class="slider-slide">
-            <img src="ct4-nhom2-image/mitsay3.jpg" alt="Ảnh sản phẩm 7" class="slider-img" draggable="false" />
-          </div>
-          <div class="slider-slide">
-            <img src="ct4-nhom2-image/xoaisay3.jpg" alt="Ảnh sản phẩm 8" class="slider-img" draggable="false" />
-          </div>
-          <div class="slider-slide">
-            <img src="ct4-nhom2-image/tacsay3.jpg" alt="Ảnh sản phẩm 9" class="slider-img" draggable="false" />
-          </div>
-        </div>
+        <div class="slider-track" id="sliderTrack"><!-- JS render --></div>
       </div>
 
       <button class="slider-arrow slider-arrow--prev" id="sliderPrev" aria-label="Ảnh trước">
@@ -1933,12 +1905,11 @@ h1,h2,h3,h4,p{margin:0;}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
       </button>
 
-      <div class="slider-counter" id="sliderCounter">1 / 9</div>
-      <div class="slider-dots" id="sliderDots"></div>
+      <div class="slider-counter" id="sliderCounter">1 / 5</div>
+      <div class="slider-dots" id="sliderDots"><!-- JS render --></div>
     </div>
 
     <div class="variant-detail-wrap">
-      <!-- CHÈN LINK TRANG CHI TIẾT SẢN PHẨM VÀO ĐÂY -->
       <a href="javascript:void(0)" class="btn btn--ghost variant-detail-btn" id="viewDetailBtn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -1949,27 +1920,8 @@ h1,h2,h3,h4,p{margin:0;}
     </div>
 
     <div class="var-group">
-      <div class="var-group__label">Loại trái cây <span id="varFruitTag">Mít sấy</span></div>
-      <div class="var-options" id="fruitOptions">
-        <button class="var-opt is-active" data-fruit="Mít sấy" data-price="120000" data-old="150000">
-          Mít sấy <small>Ngọt tự nhiên</small>
-        </button>
-        <button class="var-opt" data-fruit="Xoài sấy" data-price="135000" data-old="160000">
-          Xoài sấy <small>Chua ngọt</small>
-        </button>
-        <button class="var-opt" data-fruit="Tắc sấy" data-price="95000" data-old="0">
-          Tắc sấy <small>Chua thanh</small>
-        </button>
-      </div>
-    </div>
-
-    <div class="var-group">
       <div class="var-group__label">Khối lượng <span id="varWeightTag">200g</span></div>
-      <div class="var-options" id="weightOptions">
-        <button class="var-opt is-active" data-weight="200g" data-mult="1">200g <small>Cơ bản</small></button>
-        <button class="var-opt" data-weight="300g" data-mult="1.35">300g <small>Phổ biến</small></button>
-        <button class="var-opt" data-weight="400g" data-mult="1.7">400g <small>Tiết kiệm</small></button>
-      </div>
+      <div class="var-options" id="weightOptions"><!-- JS render --></div>
     </div>
 
     <div class="var-group">
@@ -1983,7 +1935,7 @@ h1,h2,h3,h4,p{margin:0;}
 
     <div class="var-summary">
       <span class="var-summary__label">Tổng cộng</span>
-      <span class="var-summary__value" id="varTotal">120.000đ</span>
+      <span class="var-summary__value" id="varTotal">57.143đ</span>
     </div>
 
     <button class="btn btn--primary btn--block" id="addToCartBtn">
@@ -2143,20 +2095,73 @@ h1,h2,h3,h4,p{margin:0;}
 
 <script>
 /* =========================================================================
-   I. DỮ LIỆU
+   I. DỮ LIỆU — 3 SẢN PHẨM RIÊNG BIỆT
    ========================================================================= */
-const PRODUCT = {
-  id: 'sp-01',
-  name: 'Đồ ăn vặt trái cây sấy khô',
-  cat: 'say-kho',
-  catName: 'Đồ sấy khô',
-  basePrice: 120000,
-  baseOld: 150000,
-  rating: 4.9,
-  sold: 2480,
-  unit: 'Hộp',
-  image: 'ct4-nhom2-image/mitsay.png'
-};
+const PRODUCTS = [
+  {
+    id: 'mit-say',
+    name: 'Mít sấy',
+    cat: 'say-kho',
+    catName: 'Trái cây sấy',
+    rating: 4.9,
+    sold: 2480,
+    unit: 'Hộp',
+    weights: [
+      { w: '200g', price: 57143 },
+      { w: '400g', price: 115000 },
+      { w: '800g', price: 170000 }
+    ],
+    images: [
+      'ct4-nhom2-image/mitsay.png',
+      'ct4-nhom2-image/mitsay2.png',
+      'ct4-nhom2-image/mitsay3.jpg',
+      'ct4-nhom2-image/mitsay4.png',
+      'ct4-nhom2-image/mitsay5.png'
+    ]
+  },
+  {
+    id: 'xoai-say',
+    name: 'Xoài sấy',
+    cat: 'say-kho',
+    catName: 'Trái cây sấy',
+    rating: 4.8,
+    sold: 1980,
+    unit: 'Hộp',
+    weights: [
+      { w: '200g', price: 57143 },
+      { w: '400g', price: 115000 },
+      { w: '800g', price: 170000 }
+    ],
+    images: [
+      'ct4-nhom2-image/xoaisay.png',
+      'ct4-nhom2-image/xoaisay2.png',
+      'ct4-nhom2-image/xoaisay3.jpg',
+      'ct4-nhom2-image/xoaisay4.jpg',
+      'ct4-nhom2-image/xoaisay5.png'
+    ]
+  },
+  {
+    id: 'tac-say',
+    name: 'Tắc sấy',
+    cat: 'say-kho',
+    catName: 'Trái cây sấy',
+    rating: 4.7,
+    sold: 1520,
+    unit: 'Hộp',
+    weights: [
+      { w: '200g', price: 73000 },
+      { w: '400g', price: 145000 },
+      { w: '800g', price: 220000 }
+    ],
+    images: [
+      'ct4-nhom2-image/tacsay.png',
+      'ct4-nhom2-image/tacsay2.png',
+      'ct4-nhom2-image/tacsay3.jpg',
+      'ct4-nhom2-image/tacsay4.png',
+      'ct4-nhom2-image/tacsay5.png'
+    ]
+  }
+];
 
 const LEADERBOARD = [
   { name: 'Minh Tú',    score: 42 },
@@ -2174,6 +2179,9 @@ const LEADERBOARD = [
 const $  = (s, ctx = document) => ctx.querySelector(s);
 const $$ = (s, ctx = document) => [...ctx.querySelectorAll(s)];
 const formatPrice = n => Math.round(n).toLocaleString('vi-VN') + 'đ';
+
+// Giá gốc (gạch ngang) = giá bán + ~20%, làm tròn đến nghìn
+const oldPriceOf = price => Math.round(price * 1.2 / 1000) * 1000;
 
 /* =========================================================================
    III. SMOOTH SCROLL
@@ -2254,18 +2262,24 @@ document.addEventListener('keydown', e => {
 });
 
 /* =========================================================================
-   V. RENDER SẢN PHẨM
+   V. RENDER SẢN PHẨM — DUYỆT QUA MẢNG PRODUCTS
    ========================================================================= */
 const grid = $('#productGrid');
 let currentFilter = 'all';
 let currentKeyword = '';
 
 function renderProducts(){
-  const show = currentFilter === 'all' || currentFilter === PRODUCT.cat;
   const kw = currentKeyword.trim().toLowerCase();
-  const matchKw = !kw || PRODUCT.name.toLowerCase().includes(kw) || PRODUCT.catName.toLowerCase().includes(kw);
 
-  if (!show || !matchKw){
+  const list = PRODUCTS.filter(p => {
+    const showOk = currentFilter === 'all' || currentFilter === p.cat;
+    const matchKw = !kw
+      || p.name.toLowerCase().includes(kw)
+      || p.catName.toLowerCase().includes(kw);
+    return showOk && matchKw;
+  });
+
+  if (!list.length){
     grid.innerHTML = `
       <div style="grid-column:1/-1;text-align:center;padding:60px 20px;background:#fff;border:1.5px dashed var(--line);border-radius:var(--r-lg);">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:48px;height:48px;color:var(--brand-light);margin:0 auto 14px;">
@@ -2277,35 +2291,40 @@ function renderProducts(){
     return;
   }
 
-  grid.innerHTML = `
-    <article class="card">
+  grid.innerHTML = list.map(p => {
+    const minWeight = p.weights[0];
+    const oldPrice = oldPriceOf(minWeight.price);
+    const weightsLabel = p.weights.map(w => w.w).join(' / ');
+
+    return `
+    <article class="card" data-id="${p.id}">
       <div class="card__media">
         <span class="badge badge--hot">Bán chạy</span>
-        <img src="${PRODUCT.image}" alt="${PRODUCT.name}" class="card__img" />
+        <img src="${p.images[0]}" alt="${p.name}" class="card__img" />
       </div>
 
       <div class="card__body">
-        <div class="card__cat">${PRODUCT.catName}</div>
-        <h3 class="card__name">${PRODUCT.name}</h3>
-        <div class="card__unit">${PRODUCT.unit} · 200g / 300g / 400g</div>
+        <div class="card__cat">${p.catName}</div>
+        <h3 class="card__name">${p.name}</h3>
+        <div class="card__unit">${p.unit} · ${weightsLabel}</div>
 
         <div class="card__rating">
           <span class="stars">★★★★★</span>
-          <span>${PRODUCT.rating.toFixed(1)}</span>
+          <span>${p.rating.toFixed(1)}</span>
           <span class="dot"></span>
-          <span style="color:var(--muted);font-weight:500;">Đã bán ${PRODUCT.sold.toLocaleString('vi-VN')}</span>
+          <span style="color:var(--muted);font-weight:500;">Đã bán ${p.sold.toLocaleString('vi-VN')}</span>
         </div>
 
         <div class="card__foot">
           <div class="price">
-            <span class="price__now">${formatPrice(PRODUCT.basePrice)}</span>
-            <span class="price__old">${formatPrice(PRODUCT.baseOld)}</span>
+            <span class="price__now">${formatPrice(minWeight.price)}</span>
+            <span class="price__old">${formatPrice(oldPrice)}</span>
           </div>
           <div class="card__actions">
-            <button class="btn btn--primary btn--sm" data-open-variant>
+            <button class="btn btn--primary btn--sm" data-open-variant data-id="${p.id}">
               Mua ngay
             </button>
-            <button class="btn-plus" data-open-variant aria-label="Thêm nhanh vào giỏ">
+            <button class="btn-plus" data-open-variant data-id="${p.id}" aria-label="Thêm nhanh vào giỏ">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 5v14M5 12h14"/>
               </svg>
@@ -2314,6 +2333,7 @@ function renderProducts(){
         </div>
       </div>
     </article>`;
+  }).join('');
 }
 
 $('#filters').addEventListener('click', e => {
@@ -2388,11 +2408,11 @@ function renderCart(){
   cartBody.innerHTML = cart.map((it, idx) => `
     <div class="citem">
       <div class="citem__media">
-        <img src="${PRODUCT.image}" alt="${PRODUCT.name}" class="citem__img" />
+        <img src="${it.image}" alt="${it.name}" class="citem__img" />
       </div>
       <div class="citem__info">
-        <h4 class="citem__name">${PRODUCT.name}</h4>
-        <div class="citem__unit">${it.fruit} · ${it.weight}</div>
+        <h4 class="citem__name">${it.name}</h4>
+        <div class="citem__unit">${it.weight}</div>
         <div class="citem__row">
           <div class="mini-qty">
             <button data-cart-dec="${idx}" aria-label="Giảm">−</button>
@@ -2467,97 +2487,107 @@ $('#checkoutBtn').addEventListener('click', () => {
 });
 
 /* =========================================================================
-   VII. MODAL VARIANT
+   VII. MODAL VARIANT — THEO TỪNG SẢN PHẨM
    ========================================================================= */
 const variant = {
-  fruit: 'Mít sấy',
-  fruitPrice: 120000,
-  fruitOld: 150000,
-  weight: '200g',
-  weightMult: 1,
+  product: null,    // object sản phẩm đang chọn
+  weight: '',       // '200g' | '400g' | '800g'
+  price: 0,         // giá của khối lượng đang chọn (đã fix cứng từ dữ liệu)
   qty: 1
 };
 
-let variantMode = 'buy';
+let variantMode = 'buy'; // 'buy' | 'add'
 
 function updateVariantUI(){
-  const unitPrice = variant.fruitPrice * variant.weightMult;
-  const unitOld = variant.fruitOld ? variant.fruitOld * variant.weightMult : 0;
+  if (!variant.product) return;
+
+  const unitPrice = variant.price;
+  const unitOld = oldPriceOf(unitPrice);
   const total = unitPrice * variant.qty;
 
   $('#varPrice').textContent = formatPrice(unitPrice);
   const oldEl = $('#varOld');
-  if (unitOld > 0){
-    oldEl.textContent = formatPrice(unitOld);
-    oldEl.style.display = 'inline';
-  } else {
-    oldEl.style.display = 'none';
-  }
-  $('#varFruitTag').textContent = variant.fruit;
+  oldEl.textContent = formatPrice(unitOld);
+  oldEl.style.display = 'inline';
+
   $('#varWeightTag').textContent = variant.weight;
   $('#qtyValue').textContent = variant.qty;
   $('#varTotal').textContent = formatPrice(total);
+
+  $('#addToCartBtnLabel').textContent = variantMode === 'buy' ? 'Mua ngay' : 'Thêm vào giỏ hàng';
 }
 
-function updateVariantBtnLabel(){
-  const label = $('#addToCartBtnLabel');
-  if (!label) return;
-  label.textContent = variantMode === 'buy' ? 'Mua ngay' : 'Thêm vào giỏ hàng';
+function renderWeightOptions(product){
+  const wrap = $('#weightOptions');
+  const labels = ['Cơ bản', 'Phổ biến', 'Tiết kiệm'];
+  wrap.innerHTML = product.weights.map((w, i) => `
+    <button class="var-opt${i === 0 ? ' is-active' : ''}"
+            data-weight="${w.w}"
+            data-price="${w.price}">
+      ${w.w} <small>${labels[i] || ''}</small>
+    </button>
+  `).join('');
 }
 
-function openVariantModal(mode){
+function openVariantModal(mode, productId){
   variantMode = (mode === 'add') ? 'add' : 'buy';
 
-  variant.fruit = 'Mít sấy';
-  variant.fruitPrice = 120000;
-  variant.fruitOld = 150000;
-  variant.weight = '200g';
-  variant.weightMult = 1;
+  const product = PRODUCTS.find(p => p.id === productId) || PRODUCTS[0];
+  variant.product = product;
+  variant.weight = product.weights[0].w;
+  variant.price = product.weights[0].price;
   variant.qty = 1;
 
-  $$('#fruitOptions .var-opt').forEach((b, i) => b.classList.toggle('is-active', i === 0));
-  $$('#weightOptions .var-opt').forEach((b, i) => b.classList.toggle('is-active', i === 0));
+  // Info sản phẩm trong modal
+  $('#varProductImg').src = product.images[0];
+  $('#varProductImg').alt = product.name;
+  $('#varProductName').textContent = product.name;
+
+  // Nhóm khối lượng
+  renderWeightOptions(product);
+
+  // Slider ảnh động
+  buildSlider(product.images);
+  resetSlider();
 
   updateVariantUI();
-  updateVariantBtnLabel();
-  resetSlider();
   openModal('modalVariant');
 }
 
+/* -------------------------------------------------------------------------
+   Click trong grid: nút "+" -> mode 'add', nút "Mua ngay"/card -> mode 'buy'
+   ------------------------------------------------------------------------- */
 grid.addEventListener('click', e => {
   const plusBtn = e.target.closest('.btn-plus');
   if (plusBtn){
     e.stopPropagation();
     e.preventDefault();
-    openVariantModal('add');
+    openVariantModal('add', plusBtn.dataset.id);
+    return;
+  }
+
+  const openBtn = e.target.closest('[data-open-variant]');
+  if (openBtn){
+    e.preventDefault();
+    openVariantModal('buy', openBtn.dataset.id);
     return;
   }
 
   const card = e.target.closest('.card');
-  if (card){
+  if (card && card.dataset.id){
     e.preventDefault();
-    openVariantModal('buy');
+    openVariantModal('buy', card.dataset.id);
   }
 });
 
-$('#fruitOptions').addEventListener('click', e => {
-  const btn = e.target.closest('.var-opt');
-  if (!btn) return;
-  $$('#fruitOptions .var-opt').forEach(b => b.classList.remove('is-active'));
-  btn.classList.add('is-active');
-  variant.fruit = btn.dataset.fruit;
-  variant.fruitPrice = Number(btn.dataset.price);
-  variant.fruitOld = Number(btn.dataset.old);
-  updateVariantUI();
-});
-
+/* --- Chọn khối lượng (event delegation, vì innerHTML được render lại) --- */
 $('#weightOptions').addEventListener('click', e => {
   const btn = e.target.closest('.var-opt');
   if (!btn) return;
   $$('#weightOptions .var-opt').forEach(b => b.classList.remove('is-active'));
   btn.classList.add('is-active');
   variant.weight = btn.dataset.weight;
-  variant.weightMult = Number(btn.dataset.mult);
+  variant.price = Number(btn.dataset.price);
   updateVariantUI();
 });
 
@@ -2569,38 +2599,35 @@ $('#qtyPlus').addEventListener('click', () => {
 });
 
 $('#addToCartBtn').addEventListener('click', () => {
-  const unitPrice = variant.fruitPrice * variant.weightMult;
+  if (!variant.product) return;
+  const p = variant.product;
+
   const item = {
-    fruit: variant.fruit,
+    productId: p.id,
+    name: p.name,
+    image: p.images[0],
     weight: variant.weight,
     qty: variant.qty,
-    unitPrice
+    unitPrice: variant.price
   };
 
-  if (variantMode === 'buy'){
-    if (!currentUser){
-      pendingCartItem = item;
-      closeModal('modalVariant');
-      showToast('Vui lòng đăng nhập để mua hàng', 'danger');
-      setTimeout(() => openModal('modalAuth'), 280);
-      return;
-    }
-    actuallyAddToCart(item);
+  if (variantMode === 'buy' && !currentUser){
+    pendingCartItem = item;
     closeModal('modalVariant');
-    showToast(`Đã thêm ${item.qty} × ${PRODUCT.name} (${item.fruit} · ${item.weight}) vào giỏ`);
-    setTimeout(() => openDrawer(), 220);
+    showToast('Vui lòng đăng nhập để mua hàng', 'danger');
+    setTimeout(() => openModal('modalAuth'), 280);
     return;
   }
 
   actuallyAddToCart(item);
   closeModal('modalVariant');
-  showToast(`Đã thêm ${item.qty} × ${PRODUCT.name} (${item.fruit} · ${item.weight}) vào giỏ`);
+  showToast(`Đã thêm ${item.qty} × ${item.name} (${item.weight}) vào giỏ`);
   setTimeout(() => openDrawer(), 220);
 });
 
 function actuallyAddToCart(item){
-  const key = `${item.fruit}|${item.weight}`;
-  const existing = cart.find(c => `${c.fruit}|${c.weight}` === key);
+  const key = `${item.productId}|${item.weight}`;
+  const existing = cart.find(c => `${c.productId}|${c.weight}` === key);
   if (existing){
     existing.qty += item.qty;
   } else {
@@ -2610,11 +2637,11 @@ function actuallyAddToCart(item){
 }
 
 /* =========================================================================
-   VII-b. SLIDER 9 ẢNH
+   VII-b. SLIDER ẢNH ĐỘNG
    ========================================================================= */
 const slider = {
   index: 0,
-  total: 9,
+  total: 0,
   viewport: null,
   track: null,
   dotsEl: null,
@@ -2634,19 +2661,7 @@ function initSlider(){
   slider.counter  = $('#sliderCounter');
 
   if (!slider.viewport || !slider.track || !slider.dotsEl) return;
-
-  slider.total = slider.track.children.length;
   slider.initialized = true;
-
-  slider.dotsEl.innerHTML = '';
-  for (let i = 0; i < slider.total; i++){
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.className = 'slider-dot' + (i === 0 ? ' is-active' : '');
-    dot.dataset.idx = i;
-    dot.setAttribute('aria-label', 'Xem ảnh ' + (i + 1));
-    slider.dotsEl.appendChild(dot);
-  }
 
   $('#sliderPrev').addEventListener('click', () => sliderGo(slider.index - 1));
   $('#sliderNext').addEventListener('click', () => sliderGo(slider.index + 1));
@@ -2694,8 +2709,40 @@ function initSlider(){
   });
 
   slider.track.addEventListener('dragstart', e => e.preventDefault());
+}
 
-  updateSliderUI(true);
+/* Render các slide + dots dựa trên mảng images của sản phẩm */
+function buildSlider(images){
+  if (!slider.initialized) initSlider();
+  if (!slider.track) return;
+
+  slider.total = images.length;
+  slider.index = 0;
+
+  slider.track.innerHTML = images.map((src, i) => `
+    <div class="slider-slide">
+      <img src="${src}" alt="Ảnh sản phẩm ${i + 1}" class="slider-img" draggable="false" />
+    </div>
+  `).join('');
+
+  slider.dotsEl.innerHTML = '';
+  for (let i = 0; i < images.length; i++){
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'slider-dot' + (i === 0 ? ' is-active' : '');
+    dot.dataset.idx = i;
+    dot.setAttribute('aria-label', 'Xem ảnh ' + (i + 1));
+    slider.dotsEl.appendChild(dot);
+  }
+
+  // Reset về ảnh 1, không animate
+  slider.track.style.transition = 'none';
+  slider.track.style.transform = 'translateX(0)';
+  void slider.track.offsetWidth;
+
+  if (slider.counter) slider.counter.textContent = `1 / ${images.length}`;
+  if ($('#sliderPrev')) $('#sliderPrev').disabled = true;
+  if ($('#sliderNext')) $('#sliderNext').disabled = images.length <= 1;
 }
 
 function sliderGo(idx){
@@ -2850,7 +2897,7 @@ $('#authForm').addEventListener('submit', e => {
   if (pendingCartItem){
     setTimeout(() => {
       actuallyAddToCart(pendingCartItem);
-      showToast(`Đã thêm ${pendingCartItem.qty} × ${PRODUCT.name} vào giỏ`);
+      showToast(`Đã thêm ${pendingCartItem.qty} × ${pendingCartItem.name} vào giỏ`);
       pendingCartItem = null;
       setTimeout(() => openDrawer(), 220);
     }, 400);
@@ -3413,8 +3460,8 @@ renderProducts();
 renderCart();
 renderLeaderboard();
 renderAuthMode();
-updateVariantUI();
 initSlider();
+updateVariantUI();
 </script>
 </body>
 </html>
