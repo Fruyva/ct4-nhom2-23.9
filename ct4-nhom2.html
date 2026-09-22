@@ -933,7 +933,7 @@ h1,h2,h3,h4,p{margin:0;}
 
   .hero{padding:44px 0 52px;}
   .hero__grid{grid-template-columns:1fr;gap:36px;}
-  .hero__media{order:-1;}
+  /* ✅ ĐÃ XOÁ order:-1 → video xuống dưới nội dung trên mobile/tablet */
   .hero__title{font-size:clamp(26px,5vw,36px);}
   .hero__desc{font-size:15px;margin-bottom:22px;}
   .hero__cta{margin-bottom:26px;}
@@ -993,6 +993,7 @@ h1,h2,h3,h4,p{margin:0;}
 
   .hero{padding:28px 0 40px;}
   .hero__grid{gap:30px;}
+  /* Không còn order nào cho .hero__media ở đây */
   .hero__title{font-size:26px;line-height:1.2;margin-bottom:14px;}
   .hero__desc{font-size:14px;line-height:1.65;margin-bottom:20px;}
   .hero__cta{gap:9px;margin-bottom:22px;}
